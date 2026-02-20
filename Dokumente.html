@@ -1,0 +1,143 @@
+
+<!DOCTYPE html> 
+<title>Dokumente</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body {
+            font-family: "Helvetica Neue", sans-serif;
+            background-color: #02071f;
+            color: #ffffff;
+        } 
+        .underline {
+            text-align: center;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+            font-size: 30px;
+        }
+        a {
+            font-size: 12px;
+            color: #00d9ff;
+            background-color: rgba(0, 217, 255, 0.08);
+            text-decoration: none;
+            border: 2px solid #00d9ff;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            padding: 10px; 
+        } 
+        
+        a:hover {
+            background-color: rgba(0, 217, 255, 0.15);
+        }
+        
+        a:visited {
+            color: #00d9ff;
+            border-color: #00d9ff;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #00d9ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="showcase.html">← Zurück zur Hauptseite</a>
+    <br><br>
+    
+    <p class="underline">Meine Dokumente</p>
+    <br>
+    <p>Klick auf ein Bild, um es groß anzuschauen:</p>
+
+  
+    <div class="gallery">
+        <img src="images/foto1.jpg" alt="Zeugnis">
+        <img src="images/foto2.jpg" alt="Bewerbung">
+        <img src="images/foto3.jpg" alt="Lebenslauf">
+    </div>
+
+    
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <br><br>
+    <a href="showcase.html">← Zurück zur Hauptseite</a>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
