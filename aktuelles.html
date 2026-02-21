@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+    <title>showcase</title>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+         body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #02071f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    } 
+    .underline {
+        text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    font-size: 30px;
+   }
+   .Box {
+        font-size: 12px;
+        color: #00d9ff;
+        background-color: rgba(0, 217, 255, 0.08);
+        text-decoration: none;
+        border: 2px solid #00d9ff;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        padding: 10px;
+        right: 20px;
+    }
+    a:hover {
+        background-color: rgba(0, 217, 255, 0.2);
+    }
+    
+    a:visited {
+        color: #00d9ff;
+        border-color: #00d9ff;
+    }
+    
+    .button-container {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+        margin-left: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 20px;
+    }
+
+
+    </style>
+
+
+
+    </head>
+    <body>
+          <p class="underline"> Willkommen zu meinen Aktuellen Projekten und Fähigkeiten </p>
+  <br>
+  Hier zeige ich meine aktuellen Projekte und Fähigkeiten sowie meine zukünftigen Ziele.
+  <br>
+  Ich nutze Visual Studio Code als Editor für meine Websites und Programme, auch für diese Seite. 
+  <br>
+  Ich beherrsche HTML und gestalte Websites mit modernem Design wie diese Seite zeigt.
+
+  <br>
+  <br>
+  Ich arbeite aktuell an Datenbanken und Servern, ich habe bereits meinen ersten Server aufgesetzt und will meine kentnisse weiter vertiefen.
+  <br>
+  Ebenso will ich mich noch mit cybersecurity beschäftigen da ich es sehr interessant finde.
+
+
+  <div class="video-container" style="margin-top:20px; text-align:center;">
+            <video id="projectVideo" width="480" poster="videos/db_show-poster.jpg" controls style="cursor:pointer; background:#111; border:2px solid #00d9ff; min-height:270px;">
+      
+          <source src="videos/db_show.mp4" type="video/mp4">
+          
+      </video>
+      <p style="font-size:12px; color:#888;">Klicke auf das Video, um es abzuspielen/pausieren.</p>
+  </div>
+
+  <br>
+  
+  <br> 
+    <br>
+    <br>
+    Meine zukünftigen Ziele: Java erlernen, meine Kenntnisse in Datenbanken und Servern vertiefen, Web-Design verfeinern und cybersecurity erlernen.
+    <br>
+    <br>
+    <p class="underline">Was ich noch zu sagen habe</p>
+    <br>
+    Ich habe Programmierung nicht zufällig gelernt, es hat mich von Anfang an interessiert. Deshalb verstehe ich Code nicht einfach auswendig, sondern durchschaue, was dahinter steckt. 
+    <br>
+    <br>
+    Ich bin bereit für eine Ausbildung und möchte meine Fähigkeiten praktisch einbringen. Gleichzeitig weiß ich, dass es noch viel zu lernen gibt und genau das reizt mich. Die Möglichkeiten neues zu lernen und mich weiter zu entwickeln um besser zu werden.
+    <br>
+    <br>
+    Ich würde mich freuen, wenn Sie mir die Chance geben würden. Ich würde gerne eine Ausbildung bei ihnen machen ab dem 1.8.2026 und falls möglich davor ein Schulpraktikum bei ihnen absolbieren.
+    <br>
+    <br>
+    Ich danke ihnen für ihre Zeit und würde mich sehr über eine Rückmeldung freuen. Ebenso falls sie sich nicht für mich entscheiden würde ich mich freuen wenn sie mir mitteilen warum damit ich meine Fehler verbessern kann. Falls sie Fragen haben, können sie mich gerne kontaktieren.
+    <br>
+    <br>
+     Auf der nächsten und damit letzten Seite sehen sie meine letzten Zeugnisse, so wie kontakt daten so wie Bewerbung und Lebnslauf die auch in meine Email zu finden sind.
+    <div class="button-container">
+    <a class="Box" href="showcase.html">Zurück</a>
+    <a class="Box" href="Dokumente.html">Nächste Seite</a>
+    </div>
+    
+    <script>
+      const projectVideo = document.getElementById('projectVideo');
+      if (projectVideo) {
+          projectVideo.addEventListener('click', () => {
+              if (projectVideo.paused) projectVideo.play();
+              else projectVideo.pause();
+          });
+      }
+    </script>
+</body>
+</html> 
